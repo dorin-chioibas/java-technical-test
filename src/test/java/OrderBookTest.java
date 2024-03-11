@@ -45,7 +45,7 @@ class OrderBookTest {
         orderBook.addOrder(order);
         orderBook.modifyOrderSize(1, 20);
         assertEquals(20, orderMap.get(order.getId()).getSize());
-        assertEquals(20, bids.get(order.getPrice()).values().stream().toList().get(0).getSize());
+        assertEquals(20, bids.get(order.getPrice()).values().stream().toList().getFirst().getSize());
     }
 
     @Test
